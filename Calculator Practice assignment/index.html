@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-Task-Calculator</title>
+
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="sub_main1">
+            <button id="click1" onclick="click1()">Click</button>
+            <button id="click_i" onclick="click_i()">Click</button>
+            <div id="marksheet">
+                <table id="marksheet_table">
+                    <tr>
+                        <th>Subjects</th>
+                        <th>Min-marks</th>
+                        <th>Max-Marks</th>
+                        <th>Obtainded Marks</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject1">
+                            <datalist id="subject1">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="max1" class="marks" type="text" id="inp_1" onchange="maxNum()">
+                            <datalist id="max1" class="marks">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="M" onchange="calNum()"></td>
+                        <td rowspan="5" contenteditable="true" id="summary">
+                            <h4 id="To">Total: </h4>
+                            <h4 id="Pe">Percentage:</h4>
+                            <h4 id="Gr"> Grade:</h4>
+                            <h4 id="Re">Remarks:</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject2">
+                            <datalist id="subject2">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="max2" class="marks" type="text" id="inp_2" onchange="maxNum()">
+                            <datalist id="max2" class="marks">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="P" onchange="calNum()"></td>
+
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject3">
+                            <datalist id="subject3">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="max3" class="marks" type="text" id="inp_3" onchange="maxNum()">
+                            <datalist id="max3" class="marks">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="C" onchange="calNum()"></td>
+
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject4">
+                            <datalist id="subject4">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acoounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="max4" class="marks" type="text" id="inp_4" onchange="maxNum()">
+                            <datalist id="max4" class="marks">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="U" onchange="calNum()"></td>
+
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject5">
+                            <datalist id="subject5">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acoounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="max5" class="marks" type="text" id="inp_5" onchange="maxNum()">
+                            <datalist id="max5" class="marks">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="E" onchange="calNum()"></td>
+
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" class="subjects">
+                            <input list="subject6">
+                            <datalist id="subject6">
+                                <option value="Islamiat">
+                                <option value="Mathematics">
+                                <option value="Physics">
+                                <option value="Chemistry">
+                                <option value="Urdu">
+                                <option value="English">
+                                <option value="Computer Science">
+                                <option value="Statistics">
+                                <option value="Biology">
+                                <option value="Acoounting">
+                                <option value="Social Studies">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input list="min" class="marks">
+                            <datalist id="min">
+                                <option value="0">
+                                <option value="9">
+                                <option value="17">
+                                <option value="25">
+                                <option value="33">
+                            </datalist>
+                        </td>
+                        <td>
+                            <input type="text" list="max6" class="marks" id="inp_6" onchange="maxNum()">
+                            <datalist id="max6" class="marks">
+                                <option value="0">
+                                <option value="25">
+                                <option value="50">
+                                <option value="75">
+                                <option value="100">
+                            </datalist>
+                        </td>
+                        <td><input type="number" id="I" onchange="calNum()"></td>
+                        <td><button id="res_btn" onclick="result()">Check</button> </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="converter">
+                <table id="converter_table" >
+                    <tr>
+                        <td colspan="2">
+                            <h3>Units Converter</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>1st Unit</th>
+                        <th>2nd Unit</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="" id="unit_1">
+                                <option value="" selected disabled>Select</option>
+                                <option value="km">Kilometer</option>
+                                <option value="m">Meter</option>
+                                <option value="cm">Centimeter</option>
+                                <option value="cm">Milimeter</option>
+                                <option value="mile">Mile</option>
+                                <option value="foot">Foot</option>
+                                <option value="yard">Yard</option>
+                                <option value="inch">Inch</option>
+                                <option value="celsius">Celsius</option>
+                                <option value="fahrenheit">Fahrenheit</option>
+                                <option value="kelvin">Kelvin</option>
+                            </select>
+                            <input oninput="countUnit_1()" id="unit1" type="text" placeholder="unit 1" >
+                        </td>
+                        <td>
+                            <select name="" id="unit_2">
+                                <option value="" selected disabled>Select</option>
+                                <option value="cm">Milimeter</option>
+                                <option value="cm">Centimeter</option>
+                                <option value="m">Meter</option>
+                                <option value="km">Kilometer</option>
+                                <option value="mile">Mile</option>
+                                <option value="foot">Foot</option>
+                                <option value="yard">Yard</option>
+                                <option value="inch">Inch</option>
+                                <option value="celsius">Celsius</option>
+                                <option value="fahrenheit">Fahrenheit</option>
+                                <option value="kelvin">Kelvin</option>
+                            </select>
+                            <input oninput="countUnit_2()" id="unit2" type="text" placeholder="unit 2" >
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="age_calculator">
+                <table id="age_table" >
+                    <tr>
+                        <td colspan="4">
+                            <h2> Your Age</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="day month Year" id="hbd"></td>
+                        <td id="yr">Years</td>
+                        <td id="mth">Months</td>
+                        <td id="dys">Days</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4"><button onclick="yourAge()">Check</button></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+
+        <!-- CALCULATOR -->
+        <div id="sub_main2">
+            <button id="click2" onclick="click2()">Click</button>
+            <button id="click_ii" onclick="click_ii()">Click</button>
+            <!-- SCREEEN -->
+            <div id="screen">
+                <input type="text" readonly placeholder="Output" class="screen" id="screen1">
+                <input type="text" placeholder="Calculation" class="screen" id="screen2">
+            </div>
+            <hr>
+
+            <!-- BUTTONS -->
+            <div id="button">
+                <div id="func">
+                    <!-- Trignometry -->
+                    <span class="trigno">
+                        <button class="sub_trig" onclick="sine_Cosec()">Sine Cosec</button>
+                        <select name="" id="sin_cosec">
+                            <option value=""></option>
+                            <option value="sine">sine</option>
+                            <option value="cosec">cosec</option>
+                        </select>
+                    </span>
+                    <span class="trigno">
+                        <button class="sub_trig" onclick="cos_Sec()">Cos<br> Sec </button>
+                        <select name="" id="cos_sec">
+                            <option value=""></option>
+                            <option value="cos">cos</option>
+                            <option value="sec">sec</option>
+                        </select>
+                    </span>
+                    <span class="trigno">
+                        <button class="sub_trig" onclick="tan_Cot()">Tan <br> Cot <br> </button>
+                        <select name="" id="tan_cot">
+                            <option value=""></option>
+                            <option value="tan">tan</option>
+                            <option value="cot">cot</option>
+                        </select>
+                    </span>
+                    <span class="trigno">
+                        <button class="sub_trig" onclick="log_Ln()">Log ln</button>
+                        <select name="" id="log_ln">
+                            <option value="log">log</option>
+                            <option value="ln">ln</option>
+                        </select>
+                    </span>
+                    <span class="trigno">
+                        <button class="sub_trig" onclick="pi_E()">e <br> π</button>
+                        <select name="" id="pi_E">
+                            <option value="e">e</option>
+                            <option value="π">π</option>
+                        </select>
+                    </span>
+                    <span class="trigno"> <button class="sub_trig pi_fact" onclick="factoRial()">!</button></span>
+
+                </div>
+
+                <div id="math_func_num">
+                    <div id="math_func1">
+                        <button class="math_func1" onclick="sqTo()">&radic;</button>
+                        <button class="math_func1" onclick="cbrTo()">&#8731;</button>
+                        <span class="math_func1">
+                            <button onclick="powerTo()">x <sup>y</sup></button>
+                        </span>
+                        <button class="math_func1"  onclick="countNum('%')">%</button>
+                    </div>
+
+                    <div id="number">
+                        <!-- NUMBER -->
+                        <button class="number" onclick="countNum('0')">0</button>
+                        <button class="number" onclick="countNum('1')">1</button>
+                        <button class="number" onclick="countNum('2')">2</button>
+                        <button class="number" onclick="countNum('3')">3</button>
+                        <button class="number" onclick="countNum('4')">4</button>
+                        <button class="number" onclick="countNum('5')">5</button>
+                        <button class="number" onclick="countNum('6')">6</button>
+                        <button class="number" onclick="countNum('7')">7</button>
+                        <button class="number" onclick="countNum('8')">8</button>
+                        <button class="number" onclick="countNum('9')">9</button>
+                        <!-- OPERATOR -->
+                        <div id="operator">
+                            <button class="sub_operator" onclick="countNum('+')">&plus;</button>
+                            <button class="sub_operator" onclick="countNum('-')">&minus;</button>
+                            <button class="sub_operator" onclick="countNum('*')">&times;</button>
+                            <button class="sub_operator" onclick="countNum('/')">&divide;</button>
+                        </div>
+                    </div>
+                    <div id="math_func2">
+                        <button class="math_func2" onclick="squareTo()">x <sup>2</sup></button>
+                        <button class="math_func2" onclick="cubeTo()">x <sup>3</sup></button>
+                        <button class="math_func2" onclick="countNum('.')">.</button>
+                        <button  class="math_func2" onclick="countNum('()')">()</button>
+                    </div>
+                </div>
+                <!-- Result -->
+                <div id="output">
+                    <button class="output" onclick="randNum()">Rd#</button>
+                    <button class="output" onclick="degreeTo()">Deg°</button>
+                    <button class="output" onclick="deletedTo()">X</button>
+                    <button class="output" onclick="clearTo()">AC</button>
+                    <button class="output" onclick="equalTo('=')">=</button>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,496 @@
+*{
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+button{
+    outline: none;
+}
+body{
+ background: linear-gradient(30deg, #6087a5,#1b272f, #6087a5);
+ background-size: 250vw 250vh;
+ animation: slided 12s ease-in-out infinite;
+}
+@keyframes slided {
+    0% {
+         background-position: 0 50%;
+    }
+    50% {
+         background-position: 100% 50%;
+    }
+    100% {
+         background-position: 0 50%;
+    }
+}
+
+
+#main{
+    width: 100%;height: auto;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   align-items: center;
+}
+
+#sub_main1{
+    /* overflow: hidden; */
+    padding: 2%;
+    width: 45%;height: 600px; 
+    background: #253541;border-radius: 5%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     box-shadow:2px 2px 5px 1px #425d72 inset,-2px -2px 5px 1px #425d72 inset;
+     display: none;
+}
+table button{
+    background: #253541;color: white;transition: all .1s linear .01s;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+    border-radius:30%;width: 50px;height: 30px;   border: none;
+}
+table button:hover{
+    box-shadow:0px -1px 5px 1px #425d72, 0px 1px 5px 1px #162029;cursor: pointer;
+}
+
+#marksheet_table{
+    text-align: center;
+}
+
+tr>td> input[type="text"]{
+  width:100px;border: #54728a;font-weight: bolder;text-align: center;background: none;outline: none;
+}
+input[type="number"]{
+    width:50px;text-align: center;background: none;border: #54728a;outline: none;
+  }
+ #converter,#age_calculator{
+display: flex;
+justify-content: center;
+align-items: center;
+ } 
+#converter_table,#age_table{
+    text-align: center;
+}
+#age_table{
+    width: 95%;
+}
+#converter_table  select{
+    text-align: center;width: 40%;border: none;background: none;outline: none;
+    
+    
+}
+#unit1,#unit2{
+    text-align: center;background: none;
+    width: 55%;border-radius: 10%;border:1px solid #54728a;
+}
+table select >option{
+    color: white;text-align: center;background: #557790;
+}
+#hbd{
+    width: 100%; border-radius: 10%;border:1px solid #54728a;
+}
+#age_table  td{
+    width: 25%; 
+}
+.subjects{
+    text-transform: capitalize;
+}
+
+input[list]{
+    background: none;color: white; text-align: center;outline: none;border-radius: 10%;
+    text-transform: uppercase;font-weight: bold;width:100px;border:1px solid #54728a;
+}
+.marks{
+    border:none !important;
+    width: 40px !important;
+}
+
+
+
+
+
+#sub_main2{
+    /* display: none; */
+     padding: 2%;
+    width: 45%;height: 600px;  
+    background: #253541;border-radius: 5%;
+    box-shadow:2px 2px 5px 1px #425d72 inset,-2px -2px 5px 1px #425d72 inset;
+}
+#click2,#click1,#click_i,#click_ii{
+    border-radius:40%;width: 50px;height: 30px;   border: none;outline: none;
+    background: #253541;color: white;transition: all .1s linear .01s;
+    box-shadow:0px 1px 5px 1px #425d72, 0px -2px 5px 1px #162029;
+    margin:0 0 1% 3%;
+}
+#click2:hover,#click1:hover,#click_i:hover,#click_ii:hover{
+    box-shadow:0px -2px 5px 1px #425d72, 0px 1px 5px 1px #162029;font-size: 15px;cursor: pointer;
+}
+#screen{
+    border-radius: 5%  5% 1% 1%;width: 95%;height:120px;  margin: auto;padding: 2%;
+    background: rgba(29, 39, 48,.5);
+    box-shadow: 5px 5px 20px 2px #19252e inset, -5px -5px 20px 2px #19252e inset;
+    display: flex;justify-content: space-evenly;flex-direction: column;
+}
+input[placeholder="Output"]{
+    font-size:50px;  height: 100%; text-align: center;color:white;
+    background: none;border: none;outline: none;
+}
+input[placeholder="Calculation"]{
+    font-size:30px;  height: 100%;text-align:right;padding:0 5% 0;color:white;
+    background: none;border: none;outline: none; 
+}
+#button{
+width: auto;height:420px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+/* OPERATOR */
+#operator{
+    width:130px;height: 130px;
+    /* border: 2px red dotted; */
+    /* background: red; */
+    border-radius:50%; 
+    display: grid;grid-gap: 5%;
+    grid-template-columns: repeat(2,1fr);
+}
+.sub_operator{
+    width: auto;height: auto;border: none;font-size: 25px;
+    text-align: center;  background: #425d72;cursor: pointer;
+}
+.sub_operator:nth-child(1){
+    box-shadow:0px 2px 2px 1px #54728a, 0px -2px 5px 1px #162029;border-radius:50% 30% 5%;
+}
+.sub_operator:nth-child(1):hover{
+    box-shadow:0px -2px 2px 1px #54728a, 0px 2px 5px 1px #162029;border-radius:50% 30% 5%;
+}
+.sub_operator:nth-child(2){
+    box-shadow:0px 2px 2px 1px #54728a, 0px -2px 5px 1px #162029; border-radius:30% 50% 30% 5%;
+}
+.sub_operator:nth-child(2):hover{
+    box-shadow:0px -2px 2px 1px #54728a, 0px 2px 5px 1px #162029;border-radius:30% 50% 30% 5%;
+}
+.sub_operator:nth-child(3){
+    box-shadow:0px -2px 2px 1px #54728a, 0px 2px 2px 1px #162029;border-radius:30% 5% 30% 50%  ;
+}
+.sub_operator:nth-child(3):hover{
+    box-shadow:0px 2px 2px 1px #54728a, 0px -2px 2px 1px #162029; border-radius:30% 5% 30% 50%  ;
+}
+.sub_operator:nth-child(4){
+    box-shadow:0px -2px 2px 1px #54728a, 0px 2px 2px 1px #162029;border-radius:5% 30% 50% 30% ;
+}
+.sub_operator:nth-child(4):hover{
+    box-shadow:0px 2px 2px 1px #54728a, 0px -2px 2px 1px #162029; border-radius:5% 30% 50% 30% ;
+}
+/* MATH_FUNC */
+#math_func_num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 2% 0 2%;
+}
+#math_func1,#math_func2{
+    width: auto;height: 250px;
+    display: flex;flex-direction: column;justify-content: space-between;
+}
+
+#math_func1 button{
+    background: #253541;color: white;border: none;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+    border-radius:40%;width: 50px;height: 50px;transition: all .1s linear .01s;
+}
+#math_func1 button:hover{
+    box-shadow:0px -3px 5px 1px #425d72, 0px 2px 5px 1px #162029;font-size: 25px;cursor: pointer;
+}
+
+ #math_func2 button{
+    background: #253541;color: white;border: none;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+    border-radius:40%;transition: all .1s linear .01s;width: 50px;height: 50px;
+}
+#math_func2 button:hover{
+    box-shadow:0px -3px 5px 1px #425d72, 0px 2px 5px 1px #162029;font-size: 25px;cursor: pointer;
+}
+
+#number{
+  width: auto;height: 300px;
+  /* background: yellow; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+.number{
+    width: 50px;height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background: #253541;color: white;transition: all .1s linear .01s;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+    transform-origin:center; 
+}
+.number:hover{
+    box-shadow:0px -3px 5px 1px #425d72, 0px 2px 5px 1px #162029;font-size: 25px;cursor: pointer;
+}
+.number:nth-child(1){
+    transform: rotate(0deg) translate(120px) rotate(0deg);
+    border:none; outline:none;
+}
+.number:nth-child(2){
+    transform: rotate(36deg) translate(120px) rotate(-36deg);
+    border:none; outline:none;
+}
+.number:nth-child(3){
+    transform: rotate(72deg) translate(120px) rotate(-72deg);
+    border:none; outline:none;
+}
+.number:nth-child(4){
+    transform: rotate(108deg) translate(120px) rotate(-108deg);
+    border:none; outline:none;
+}
+.number:nth-child(5){
+    transform: rotate(144deg) translate(120px) rotate(-144deg);
+    border:none; outline:none;
+}
+.number:nth-child(6){
+    transform: rotate(180deg) translate(120px) rotate(-180deg);
+    border:none; outline:none;
+}
+.number:nth-child(7){
+    transform: rotate(216deg) translate(120px) rotate(-216deg);
+    border:none; outline:none;
+}
+.number:nth-child(8){
+    transform: rotate(252deg) translate(120px) rotate(-252deg);
+    border:none; outline:none;
+}
+.number:nth-child(9){
+    transform: rotate(288deg) translate(120px) rotate(-288deg);
+    border:none; outline:none;
+}
+.number:nth-child(10){
+    transform: rotate(324deg) translate(120px) rotate(-324deg);
+    border:none; outline:none;
+}
+
+#func{
+    width: auto;height: auto;
+    display: grid;place-items: center;
+    grid-template-columns: repeat(6,1fr);
+}
+.trigno{
+    border-radius:40%;overflow: hidden;
+    width: 50px;height: 50px;border: none;
+    background: #253541;color: white;transition: all .1s linear .01s;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+    display: flex;justify-content: space-between;flex-direction: column;align-items: center;
+}
+.sub_trig{
+    border-radius:40%;overflow: hidden;outline: none;
+    width: 50px;height: 35px;border: none;background: none;
+}
+.sub_trig:hover{
+    font-size: 15px; 
+ }
+
+.pi_fact{
+   display: flex;align-items: flex-end;justify-content: center;padding-bottom:5%;font-size:13px; 
+}
+.pi_fact:hover{
+    font-size: 18px; 
+ }
+
+
+.trigno:hover{
+    box-shadow:0px -3px 5px 1px #425d72, 0px 2px 5px 1px #162029;font-size: 15px;cursor: pointer;
+}
+.trigno>select{
+    background: none;outline: none;border: none;
+    width: 20px;
+}
+.trigno>select>option{
+   color: white;text-align: center;background: #557790;
+}
+#output{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.output{
+    border-radius:40%;width: 50px;height: 50px;   border: none;
+    background: #253541;color: white;transition: all .1s linear .01s;
+    box-shadow:0px 2px 5px 1px #425d72, 0px -3px 5px 1px #162029;
+}
+.output:hover{
+    box-shadow:0px -3px 5px 1px #425d72, 0px 2px 5px 1px #162029;font-size: 20px;cursor: pointer;color:white;
+}
+.output:nth-child(5){
+    width: 100px;border-radius:25%;background: #425d72;color: white;
+    box-shadow:0px 2px 5px 1px #54728a, 0px -3px 3px 1px #162029;transition: all .1s linear .01s;
+}
+ .output:nth-child(5):hover{
+    box-shadow:0px -3px 3px 1px #54728a, 0px -2px 5px 1px #162029;font-size: 30px;
+}
+
+/* Media Query */
+
+@media all and (min-width: 280px) and (max-width:767px){
+
+       
+    #sub_main1{
+ width: 100%;height:100%;   padding: 5% 1% 5% 1%;margin: 5% 0 5% 0;
+    }
+    table button{
+        width: 50px;height: 25px;
+    }
+    tr>td> input[type="text"],input[type="number"]{
+      width:100%;
+    }
+    input[list]{
+        width:80px;font-size: 12px;
+    }
+
+ 
+    #sub_main2{
+        width: 100%;height:100%; margin: 5% 0 5% 0;
+    }
+    #screen{
+       height:100px;padding: 1%;  
+    }
+    input[placeholder="Output"]{
+        font-size:30px;
+    }
+    input[placeholder="Calculation"]{
+        font-size:15px;
+    }
+    #operator{
+        width:90px;height: 90px;
+    }
+    .sub_operator{
+        font-size: 20px;
+    }
+    #math_func1,#math_func2{
+        width: auto;height: 220px;
+    }
+    #math_func1 button,#math_func2 button{
+        border-radius:40%;width: 40px;height: 40px;
+    }
+    #math_func1 button:hover, #math_func2 button:hover{
+        font-size: 20px;
+    }
+.number{
+          width: 40px;height: 40px;  
+      }
+      .number:hover{
+      font-size: 20px;
+    }
+    .number:nth-child(1){
+        transform: rotate(0deg) translate(90px) rotate(0deg);
+    }
+    .number:nth-child(2){
+        transform: rotate(36deg) translate(90px) rotate(-36deg);
+    }
+    .number:nth-child(3){
+        transform: rotate(72deg) translate(90px) rotate(-72deg);
+    }
+    .number:nth-child(4){
+        transform: rotate(108deg) translate(90px) rotate(-108deg);
+    }
+    .number:nth-child(5){
+        transform: rotate(144deg) translate(90px) rotate(-144deg);
+    }
+    .number:nth-child(6){
+        transform: rotate(180deg) translate(90px) rotate(-180deg);
+    }
+    .number:nth-child(7){
+        transform: rotate(216deg) translate(90px) rotate(-216deg);
+    }
+    .number:nth-child(8){
+        transform: rotate(252deg) translate(90px) rotate(-252deg);
+    }
+    .number:nth-child(9){
+        transform: rotate(288deg) translate(90px) rotate(-288deg);
+    }
+    .number:nth-child(10){
+        transform: rotate(324deg) translate(90px) rotate(-324deg) ;   
+    }
+    .trigno{
+        width: 40px;height: 40px;
+    }
+    .sub_trig{
+       height: 30px;font-size: 10px;
+    }
+    .sub_trig:hover{
+        font-size: 11px; 
+     }
+    .pi_fact{
+       font-size:12px; 
+    }
+    .pi_fact:hover{
+        font-size:15px; 
+     }
+    .trigno>select{
+        width: 18px;
+    }
+    .output{
+       width: 40px;height: 40px; 
+    }
+    .output:hover{
+      font-size: 15px;
+    }
+    .output:nth-child(5){
+        width: 80px;
+    }
+    .output:nth-child(5):hover{
+        font-size: 25px;
+    }
+  
+}
+
+/* Hidden */
+@media all and (min-width: 768px) and (max-width:1080px){
+    #click_i,#click_ii{
+        display: none;
+    }
+}
+@media all and (min-width:280px) and (max-width:767px){
+    #click1,#click2{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
